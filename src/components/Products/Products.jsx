@@ -1,16 +1,14 @@
 import React from 'react';
-import './Products.scss'
-const Products = ({ product, handleClick, addToCart }) => {
+import {ProductContainer, CustomButton, BackgroundImage} from './Products.styles'
+
+const Products = ({ product, addToCart }) => {
     return (
-        <div>
-            <div 
-                className="product-card">
-                <img src={product.images[0].imageUrl} alt={product.name} style={{ width: '150px' }} />
+            <ProductContainer>
+                <BackgroundImage src={product.images[0].imageUrl}/>
                 <h4>{product.name}</h4>
                 <h5>{`R$${product.Value.toFixed(2).replace('.', ',')}`}</h5>
-                <button className="custom-button" onClick={() => { addToCart ()}}>Add to card</button>
-            </div>
-        </div>
+                <CustomButton onClick={() => { addToCart ()}}>Add to card</CustomButton>
+            </ProductContainer>
     );
 }
 

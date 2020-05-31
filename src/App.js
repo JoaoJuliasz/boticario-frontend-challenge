@@ -1,9 +1,8 @@
 import React from 'react';
 import { UserProvider } from './context/CartContext';
+import { Appcontainer } from './App.styles'
 
-import './App.css';
-
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Index from './Routes';
 
 class App extends React.Component {
@@ -48,8 +47,10 @@ class App extends React.Component {
     return (
       <>
         <UserProvider value={value}>
-          <Header cart={this.state.cart} onDelete={this.handleDelete} />
-          <Index />
+          <Appcontainer>
+            <Header cart={this.state.cart} onDelete={this.handleDelete} />
+            <Index />
+          </Appcontainer>
         </UserProvider>
       </>
     );
@@ -77,14 +78,14 @@ class App extends React.Component {
       return cartItems.map((item, index) => {
         if (item.id === elem.id) {
           newCartValue[index] = { ...item, quantity: item.quantity + 1 };
-          this.setState( state =>({
+          this.setState(state => ({
             cartItems: newCartValue,
             cart: state.cart + item.Value
           }),
             () => console.warn()
           );
         } else {
-       this.updateCartItems(item);
+          this.updateCartItems(item);
         };
       });
     } else {
