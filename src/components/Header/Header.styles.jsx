@@ -17,7 +17,7 @@ export const TitleContainer = styled(Link)
     padding-right: 25px;
     color: #252424;
     font-weight: 300;
-    font-size: 1.5em;  
+    font-size: 1.5em;
     `
 export const ProductsCategories = styled.h3`
     margin: 0;
@@ -25,6 +25,7 @@ export const ProductsCategories = styled.h3`
     cursor: pointer;
     font-weight: 100;
     color: #4e4d4d; 
+    padding-top: 4px;
     @media (max-width: 768px){
         padding-left: 10px;
     } 
@@ -38,9 +39,7 @@ export const FlexDisPlay = styled.div`
     `
 export const AlignCar = styled.div`
     padding-left: 10px;
-    @media (max-width: 767px) {
-        padding-top: 4px
-    }
+    padding-top: 4px
     `
 export const CartView = styled(Link)
     `

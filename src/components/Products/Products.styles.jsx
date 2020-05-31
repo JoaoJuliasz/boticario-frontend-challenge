@@ -13,10 +13,10 @@ export const ProductContainer = styled.div`
     height: 350px;
     position: relative;
     h4 {
-        font-size: 20px;
+        font-size: 15px;
     }
     h5 {
-        font-size: 20px;
+        font-size: 18px;
         position: absolute;
         bottom: 55px;
         left: 0;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Products from '../Products/Products';
+import Products from '../../components/Products/Products';
 import { UserConsumer } from '../../context/CartContext';
 import { HomeTitle, HomeContainer } from './Home.styles'
 

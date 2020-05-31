@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserConsumer } from '../../context/CartContext';
-import { CartContainer, CartHeader, CartProducts, BackgroundImage, ProductDescription, ProductQuantity, CartTotal, ImageCointainer } from './Cart.styles';
+import { CartContainer, CartHeader, CartProducts, BackgroundImage, ProductDescription, ProductQuantity, CartTotal, ImageCointainer, ClearCartButton } from './Cart.styles';
 class Cart extends React.Component {
     render() {
         return (
@@ -9,10 +9,10 @@ class Cart extends React.Component {
                     return (
                         <CartContainer>
                             <CartHeader>
-                                <div>Product</div>
-                                <div>Description</div>
-                                <div>Quantity</div>
-                                <div>Price</div>
+                                <div>Produto</div>
+                                <div>Descrição</div>
+                                <div>Quantidade</div>
+                                <div>Preço</div>
                             </CartHeader>
                             {cartValues.cart > 0 ?
                                 cartValues.cartItems.map(item =>
@@ -33,7 +33,7 @@ class Cart extends React.Component {
                             }
                             <CartTotal>
                                 <span>Total: R${`${cartValues.cart.toFixed(2).replace('.', ',')}`}</span>
-                                <button onClick={cartValues.cleanCart}>Clear</button>
+                                <ClearCartButton onClick={cartValues.cleanCart}>Limpar</ClearCartButton>
                             </CartTotal>
                         </CartContainer>
                     )
