@@ -28,6 +28,23 @@ class App extends React.Component {
           products: data,
         }, () => console.warn())
       })
+      
+    const cart = localStorage.getItem('cart');
+    const cartItems = localStorage.getItem('cartItems');
+    console.warn(cartItems)
+    if (cart !== null) {
+      this.setState({
+        cart: parseFloat(cart),
+        cartItems: JSON.parse(cartItems),
+      },
+      () => console.warn(this.state)
+      );
+    }
+
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('cart', this.state.cart);
+      localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
+    })
   }
   render() {
     const { products, cartItems, cart } = this.state;

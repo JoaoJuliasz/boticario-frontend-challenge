@@ -7,7 +7,7 @@ const Products = ({ product, addToCart }) => {
                 <BackgroundImage src={product.images[0].imageUrl}/>
                 <h4>{product.name}</h4>
                 <h5>{`R$${product.Value.toFixed(2).replace('.', ',')}`}</h5>
-                <CustomButton onClick={() => { addToCart ()}}>Add to card</CustomButton>
+                <CustomButton onClick={() => { addToCart ()}}>Add to cart</CustomButton>
             </ProductContainer>
     );
 }

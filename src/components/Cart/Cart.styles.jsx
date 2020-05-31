@@ -7,6 +7,7 @@ export const CartContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 50px auto 0px;
+    color: #252424;
     @media (max-width: 599px) {
     width: 85%;
     }
@@ -19,6 +20,9 @@ export const CartHeader = styled.div`
     width: 100%;
     padding-bottom: 10px;
     color: #252424;
+    @media (max-width: 599px) {
+    font-size: 14px;
+    }
 `
 
 export const CartProducts = styled.div`
@@ -30,12 +34,15 @@ export const CartProducts = styled.div`
     border-bottom: 1px solid darkgrey;
     padding: 15px 0px;
     justify-content: space-around;
-    @media (max-width: 800px) {
+    @media (max-width: 1024px) {
         font-size: 15px;
     }
 `
 export const ImageCointainer = styled.div`
     width: 23%;
+    @media(min-width: 768px){
+        width: 14%
+    }
     `
 export const BackgroundImage = styled.img`
     width: 100%; 
@@ -66,5 +73,21 @@ export const CartTotal = styled.div`
 
     span {
         padding: 5px;
+    }
+`
+export const ClearCartButton = styled.button `
+    background: #f75151;
+    border: 1px solid #887f7f;
+    width: 60px;
+    height: 25px;
+    color: #f9f1f1;
+    margin: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    :hover {
+        color: #f75151;
+        border: 1px solid #f75151;
+        background: none
     }
 `
